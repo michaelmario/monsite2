@@ -1,22 +1,284 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>monsite 2</title>
+        <title>mon site</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <h1>mon site sur github</h1>
-        <script src="" async defer></script>
+        <div class="container-fluid topheader">
+            <header class="py-3">
+                <nav class="navbar navbar-expand-lg navbar-dark"
+                    aria-label="Ninth navbar example">
+                    <div class="container-xl align-items-end">
+                        <div class="navbar_brand">
+                            <img src="images/logoresize.png" alt="logoHeader">
+                        </div>
+                        <button class="navbar-toggler" type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#leportNavbar"
+                            aria-controls="navbarsExample07XL"
+                            aria-expanded="false" aria-label="Toggle
+                            navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse
+                            justify-content-end"
+                            id="leportNavbar">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link"
+                                        aria-current="page">Accueil</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/actualites.html"
+                                        class="nav-link">Actualités</a></li>
+                                <li class="nav-item"><a href="#"
+                                        class="nav-link">E-port</a></li>
+                                <li class="nav-item"><a href="#"
+                                        class="nav-link">Activités
+                                        du mois</a></li>
+                                <li class="nav-item"><a href="/contact.html"
+                                        class="nav-link">Contact</a></li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </nav>
+            </header>
+        </div>
+        <div class="overlay">
+            <div id="carouselControls" class="carousel slide"
+                data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h1>Le Port</h1>
+                        <div class="feature-icon separate topheader
+                            bg-gradient">
+                        </div>
+                        <h3 class="text-center">Le Poumon Economique de la réunion</h3>
+                        <img src="./images/lport3.jpg" class="image-fluid
+                            carouselItemImg"
+                            alt="...">
+
+                    </div>
+                    <div class="carousel-item">
+                        <h1 class="text-center">Le Port</h1>
+                        <div class="feature-icon separate topheader
+                            bg-gradient">
+                        </div>
+                        <h3 class="text-center">Le Poumon Economique de la réunion</h3>
+                        <img src="./images/lport3.jpg" class="image-fluid
+                            carouselItemImg"
+                            alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="container">
+            <h1 class="text-center mt-5"> les actualités </h1>
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                <div class="feature col">
+                    <div class="topheader bg-gradient">
+                        <div class="barIcon">
+                            <img src="./images/icons/svg/049-journal.svg" alt=""
+                                class="img-fluid">
+                        </div>
+                    </div>
+                    <h2>Actualités</h2>
+                    <p>Paragraph of text beneath the heading to explain the
+                        heading. We'll add onto it with another sentence and
+                        probably just keep going until we run out of words.</p>
+                    <a href="#" class="btn btn-light">
+                        Voir plus ...
+
+                    </a>
+                </div>
+                <div class="feature col">
+                    <div class="topheader bg-gradient">
+                        <div class="barIcon">
+                            <img src="images/icons/svg/001-adventure.svg" alt=""
+                                class="img-fluid">
+                        </div>
+                    </div>
+                    <h2>Activités du mois</h2>
+                    <p>Paragraph of text beneath the heading to explain the
+                        heading. We'll add onto it with another sentence and
+                        probably just keep going until we run out of words.</p>
+                    <a href="#" class="btn btn-light">
+                        Voir plus ...
+
+                    </a>
+                </div>
+                <div class="feature col">
+                    <div class="topheader bg-gradient">
+                        <div class="barIcon">
+                            <img src="/images/icons/svg/092-university.svg"
+                                alt="" class="img-fluid">
+                        </div>
+                    </div>
+                    <h2>La Mairie</h2>
+                    <p>Paragraph of text beneath the heading to explain the
+                        heading. We'll add onto it with another sentence and
+                        probably just keep going until we run out of words.</p>
+                    <a href="#" class="btn btn-light">
+                        Voir plus ...
+
+                    </a>
+                </div>
+            </div>
+            <div class="container px-4 py-5" id="custom-cards">
+                <h1 class="text-center pb-2 border-bottom">Les Dernières
+                    Actualités Postées</h1>
+
+                <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4
+                    py-5">
+                    <div class="col">
+                        <div class="card card-cover h-100 overflow-hidden
+                            text-white bg-dark rounded-5 shadow-lg"
+                            style="background-image:
+                            url('./images/resizeImg2.jpg');">
+                            <div class="d-flex flex-column h-100 p-5 pb-3
+                                text-white text-shadow-1">
+                                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1
+                                    fw-bold">Un bon climat pendant toute l'année</h2>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                    <li class="me-auto">
+                                        <img
+                                            src="./images/icons/svg/088-teachers.svg"
+                                            alt="Bootstrap" width="32"
+                                            height="32" class="rounded-circle
+                                            border border-white">
+                                    </li>
+                                    <li class="d-flex align-items-center me-3">
+                                        <svg class="bi me-2" width="1em"
+                                            height="1em"><use
+                                                xlink:href="#geo-fill"></use></svg>
+                                        <small>climat</small>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <svg class="bi me-2" width="1em"
+                                            height="1em"><use
+                                                xlink:href="#calendar3"></use></svg>
+                                        <small>97420</small>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card card-cover h-100 overflow-hidden
+                            text-white bg-dark rounded-5 shadow-lg"
+                            style="background-image:
+                            url('./images/resizeimg3.jpg');">
+                            <div class="d-flex flex-column h-100 p-5 pb-3
+                                text-white text-shadow-1">
+                                <h2 class="pt-5 mt-5 mb-4 display-9 lh-1
+                                    fw-bold">AVEC TOUT LE NÉCESSAIRE À PROXIMITÉ</h2>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                    <li class="me-auto">
+                                        <img
+                                            src="./images/icons/svg/088-teachers.svg"
+                                            alt="Bootstrap" width="32"
+                                            height="32" class="rounded-circle
+                                            border border-white">
+                                    </li>
+                                    <li class="d-flex align-items-center me-3">
+                                        <svg class="bi me-2" width="1em"
+                                            height="1em"><use
+                                                xlink:href="#geo-fill"></use></svg>
+                                        <small>Proximité</small>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <svg class="bi me-2" width="1em"
+                                            height="1em"><use
+                                                xlink:href="#calendar3"></use></svg>
+                                        <small>97420</small>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card card-cover h-100 overflow-hidden
+                            text-white rounded-15 shadow-md"
+                            style="background-image:
+                            url('./images/resizeimg4.jpg');">
+                            <div class="d-flex flex-column h-100 p-5 pb-3
+                                text-shadow-1">
+                                <h2 class="pt-5 mt-5 mb-4 display-9 lh-1
+                                    fw-bold">VOUS NE POUVEZ PAS MANQUER CETTE
+                                    VILLE</h2>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                    <li class="me-auto">
+                                        <img
+                                            src="/images/icons/svg/088-teachers.svg"
+                                            alt="Bootstrap" width="32"
+                                            height="32" class="rounded-circle
+                                            border border-white">
+                                    </li>
+                                    <li class="d-flex align-items-center me-3">
+                                        <svg class="bi me-2" width="1em"
+                                            height="1em"><use
+                                                xlink:href="#geo-fill"></use></svg>
+                                        <small>Panorama</small>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <svg class="bi me-2" width="1em"
+                                            height="1em"><use
+                                                xlink:href="#calendar3"></use></svg>
+                                        <small>97420</small>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid topheader">
+            <footer class="container py-5 ">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-center">© 2021 Mauricode Academy 2021,
+                            Inc. All rights
+                            reserved.</p>
+                        <div class="text-center">Icônes conçues par <a
+                                href="https://www.flaticon.com/fr/auteurs/flat-icons"
+                                title="Flat Icons">Flat Icons</a> from <a
+                                href="https://www.flaticon.com/fr/"
+                                title="Flaticon">www.flaticon.com</a></div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="./js/main.js" async defer></script>
     </body>
 </html>

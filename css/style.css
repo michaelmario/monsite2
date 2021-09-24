@@ -1,0 +1,165 @@
+.topheader{
+    background-color: rgb(7 7 241 / 69%);   
+}
+.topheader a{
+    color:#fff !important;
+    text-transform: uppercase;
+}
+.topheader a:hover{
+    color:rgb(243, 141, 8) !important;
+}
+a{
+    color:rgb(7 7 241 / 69%);
+}
+.fa{
+    color:rgb(7 7 241 / 69%); 
+}
+
+#carouselControls{
+    margin-top:-24px;
+    z-index: -1;
+}
+.carouselItemImg{
+    height:500px;
+    width:100%;
+    
+   }
+   .overlay{
+    position: relative;
+    top:22px;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */  
+    width: 100%;  
+    opacity:1; 
+        
+}
+
+.overlay h1{
+    position: absolute;
+    color:#fff;
+    top:20%;
+    left:40%;
+    text-transform: uppercase;
+   
+    z-index:10;
+}
+.overlay h3{
+    position: absolute;
+    color:rgb(243, 141, 8);
+    top:45%;
+    left:25%;
+     text-transform: uppercase;
+   
+   
+}
+.overlay .separate{
+    position: absolute;
+     top:35%;
+    left:35%;
+    width:25%;
+    margin-bottom: 20px;
+    border:5px solid rgb(7 7 241 / 69%);
+}
+h1{
+    text-transform: uppercase;
+}
+.barIcon{
+    background-color: cornflowerblue;
+    width:2em;
+    height:2em;
+}
+.fas{
+    font-size:48px;
+    
+}
+h2{
+    color:rgb(243, 141, 8);
+}
+footer{
+    color:#fff;
+    width:100%;
+    margin-top:150px;
+}
+/* ACTUALITY_PAGE */
+.coverPhoto{
+background-size: contain;
+}
+
+/*CONTACT PAGE*/
+.contactPage{
+background-image:url(/images/lport3.jpg);
+background-size:cover;
+height:100vh;
+}
+.overlayContact{
+    position: relative;
+    top:0px;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.637);  
+    width: 100%;  
+    opacity:1; 
+   
+   
+}
+.formContainer{
+    height: 85vh;
+    color:fff;
+    background-color: rgba(0, 0, 0, 0.472);
+}
+.containerMessage{
+    margin:20px auto;
+   }
+   #googleMap{
+  height:400px;
+  width:100%;
+  margin:10px auto;
+ 
+   }
+
+@media (max-width:768px){
+    .overlay h3{
+        left:1%;
+    }
+    .overlay .separate{
+       width:41%;
+    }
+    .cardAdress{
+        margin:10px auto;
+    }
+    .overlayContact {
+        height:217vh;
+    }
+    .containerMessage{
+     margin:5px auto;
+    }
+    .formContainer {
+        height: 110vh;
+        width:100%;
+    }
+    .list-group {
+       padding-left: 10px !important;
+    }
+    #googleMap{
+        margin-top:785px;
+    }
+    .footerContainer{
+        display:none;
+    }
+}
+@media (min-width:768px){
+    .contactPage {
+        height:90vh;
+    }
+    .overlayContact {
+        height:110vh;
+    }
+    #googleMap{
+        margin-top:136px;
+    }
+    .footerContainer{
+        display:block;
+       
+    } 
+
+ }   
+
