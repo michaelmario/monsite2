@@ -87,7 +87,7 @@ background-size: contain;
 
 /*CONTACT PAGE*/
 .contactPage{
-background-image:url(/img/lport3.jpg);
+background-image:url(../img/lport3.jpg);
 background-size:cover;
 height:100vh;
 }
