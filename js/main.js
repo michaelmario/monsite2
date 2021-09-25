@@ -18,11 +18,11 @@
       })
       
   })()
-  function myMap() {    
-        var myCenter = new google.maps.LatLng( -20.932008,55.2936906,17);
-        var mapProp = {center:myCenter, zoom:18, scrollwheel:false, draggable:false, mapTypeId:'satellite'};
-        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-        var marker = new google.maps.Marker({position:myCenter});
+  function myMap() {   
+       let myCenter = new google.maps.LatLng( -20.932008,55.2936906,17);
+       let mapProp = {center:myCenter, zoom:18, scrollwheel:false, draggable:false, mapTypeId:'satellite'};
+       let map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+       let marker = new google.maps.Marker({position:myCenter});
         marker.setMap(map);
       }
       myMap();
