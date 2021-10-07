@@ -138,56 +138,59 @@
             <div class="card container formContainer">
               <div class="card-header text-upercase topheader text-center
                 text-white mt-3 mb-3">Message</div>
-              <form class="row g-2 needs-validation" novalidate>
+              <form class="row g-2 needs-validation" id="formValue" novalidate>
                 <div class="col-md-6">
-                  <label for="validationCustom01" class="form-label">Nom</label>
+                  <label for="familyName" class="form-label">Nom</label>
                   <input type="text" class="form-control"
-                    id="validationCustom01" placeholder="Mario" required>
+                    id="familyName" placeholder="Mario" pattern="[A-Za-z]" minlength="6" maxlength="20" required>
                   <div class="valid-feedback">
                     Looks good!
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                  <label for="validationCustom02" class="form-label">Prenom</label>
+                  <label for="name" class="form-label">Prenom</label>
                   <input type="text" class="form-control"
-                    id="validationCustom02" placeholder="Achille" required>
+                    id="name" placeholder="Achille" pattern="[A-Za-z]" minlength="6" maxlength="10" required>
                   <div class="valid-feedback">
                     Looks good!
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                  <label for="validationCustomUsername" class="form-label">Couriel</label>
+                  <label for="email" class="form-label">Couriel</label>
                   <div class="input-group has-validation">
                     <span class="input-group-text" id="inputGroupPrepend">@</span>
                     <input type="email" class="form-control"
-                      id="validationCustomUsername"
-                      placeholder="name@example.com">
+                      id="email"
+                      placeholder="name@example.com" required>
                     <div class="invalid-feedback">
                       Please write your Email.
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                  <label for="validationCustom03" class="form-label">City</label>
+                  <label for="city" class="form-label">City</label>
                   <input type="text" class="form-control"
-                    id="validationCustom03" required>
+                    id="city" placeholder="Curepipe"  minlength="5" maxlength="10"  required>
                   <div class="invalid-feedback">
                     Please provide a valid city.
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-6 col-sm-12 containerMessage">
-                    <label for="validationCustom03" class="form-label">Message</label>
+                    <label for="messageSend" class="form-label">Message</label>
                   </div>
                   <div class="col-md-6 col-sm-12 ">
-                    <textarea name="" id="validationCustom03" 
+                    <textarea name="" id="messageSend" class="form-control" minlength="8" maxlength="230" required
                     ></textarea>
+                    <div class="invalid-feedback">
+                      Please write your message .
+                    </div>
                   </div>
                 </div>
                 <div class="col-12 col-sm-12">
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value=""
-                      id="invalidCheck" required>
+                      id="invalidCheck" >
                     <label class="form-check-label" for="invalidCheck">
                       Agree to terms and conditions
                     </label>
@@ -197,7 +200,7 @@
                   </div>
                 </div>
                 <div class="col-6">
-                  <button class="btn btn-success" title="Evoyer" type="submit">Envoyer</button>
+                  <button class="btn btn-success" title="Evoyer" type="submit" id="btnEnvoyer">Envoyer</button>
                 </div>
                 <div class="col-6">
                   <a href="/contact.html" title="Refresh" class="btn btn-dark"><i
