@@ -1,3 +1,7 @@
+
+.navbar-toggler{
+  display:none;
+}
 .topheader {
   background-color: rgb(7 7 241 / 69%);
 }
@@ -19,16 +23,23 @@ a {
 #carouselControls {
   margin-top: -24px;
   z-index: -1;
+  background-image:url('../img/lport3.jpg');
+  background-size: cover;
+  object-fit: contain;
+  height: 500px;
+  width: 100%;
+ 
 }
 .carouselItemImg {
   height: 500px;
   width: 100%;
 }
+
 .overlay {
   position: relative;
   top: 22px;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  background: rgba(161, 158, 158, 0.5); /* Black see-through */
   width: 100%;
   opacity: 1;
 }
@@ -42,7 +53,7 @@ a {
 
   z-index: 10;
 }
-.overlay h3 {
+.overlay h2 {
   position: absolute;
   color: rgb(243, 141, 8);
   top: 45%;
@@ -66,15 +77,14 @@ h1 {
   height: 2em;
 }
 .fas {
-  font-size: 48px;
+  font-size:20px;
 }
 h2 {
-  color: rgb(243, 141, 8);
+  color:rgb(20 12 1);
 }
 footer {
   color: #fff;
   width: 100%;
-  margin-top: 50px;
 }
 .CookieNotice {
   display: none;
@@ -191,6 +201,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border-width: thin;
 }
 .imgTopCard {
+  width:50%;
   height:50%;
 }
 
@@ -253,8 +264,243 @@ textarea{
     transform: rotate(359deg);
   }
 }
+.imgcircle{
+  width:50px;
+  height:50px;
+  border-radius:9999px ;
+  border:2px solid #fff;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-content{
+  justify-content: center;
+}
+.assideAdminPanel{
+  min-height: 650px;
+  height:auto;
+  width: 100%;
+  padding:10px;
+  margin-top: 0px;
+  margin-left:-12px; 
+  background-color: rgb(7 7 241 / 69%); 
+  font-size: 25px; 
+}
+
+.assideAdminPanel a{
+   color:#fff;
+}
+.flex{
+  display:flex;
+}
+.flex-1 {
+  flex: 1 1 0%;
+}
+.flex-col {
+  flex-direction: column;
+}
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+/*Aside*/
+.list-reset{
+ list-style: none;
+ width:100% !important;
+ margin:0 auto;
+ padding-left: 0rem;
+}
+
+.bg-side-nav {
+  background-color:  rgb(197, 197, 238);
+}
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
+.border-b {
+  border-bottom: 1px solid navy;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+.text-sm {
+  font-size: 0.875rem;
+}
+.text-nav-item {
+  color: #626b7a;
+}
+.font-hairline {
+  font-weight: 100;
+}
+.font-sans {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+.firstSection{
+  display:none;
+ }
+ .displaySection{
+  display:block !important;
+ }
+ #sectionActivites{
+  display:none;
+ }
+ #sectionActualites{
+  display:none;
+ }
+ #sectiontable{ display:none;}
+ #sectioncomponent{ display:none;}
+ #sectionmodal{ display:none;}
+ #wysiwyg_cp{
+  padding:8px 0px;
+  max-width:100%;
+  }
+  #wysiwyg{
+    padding:8px 0px;
+    max-width:100%;
+    }
+  label{
+      font-size:19px;
+      font-weight: bolder;
+       
+  }
+  .input-group-text {
+  color:#fff;
+  background-color:rgb(7 7 241 / 69%);
+  }
+  #ActivitesrichTextField{
+    border:#000000 1px solid; 
+    width:100%;
+    height:300px; 
+   }
+  
+  #ActualitesrichTextField{
+   border:#000000 1px solid; 
+   width:100%;
+   height:300px; 
+  }
+  #myTextArea{
+   color:#fff; 
+   background-color: black;
+  }
+  .output{
+     min-height:350px;
+      width:100%;
+    }
+  #UploadImageActivites{
+      display:none;
+  }
+  #UploadImageActualites{
+    display:none;
+  }
+  #display_image{
+      width:50%;
+      height:min-content;
+      margin:10px 25%;
+  
+  }
+  .postionx{
+      position:relative;
+      width:50px;
+      top:-30px;
+      left:93%;
+      cursor: pointer;
+  }
+  .date{
+     width: 100%;
+    height: 42px;    
+    padding: 10px;
+    border-radius: 0;
+    color: #404040;
+    font-size: .8rem;
+    background-position: 95% center;
+    background-position: right 10px top 50%;
+}
+  
+  .btn-dark{
+   margin-bottom:10px;
+  }
+  #dialogoverlay{
+    display: none;
+    opacity: .8;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: #FFF;
+    width: 100%;
+    z-index: 10;
+  }
+  #dialogbox{
+    display: none;
+    position: fixed;
+    background: #000;
+    border-radius:7px; 
+    width:550px;
+    z-index: 10;
+  }
+  #dialogbox > div{ background:#FFF; margin:8px; }
+  #dialogbox > div > #dialogboxhead{ background: #666; font-size:19px; padding:10px; color:#CCC; }
+  #dialogbox > div > #dialogboxbody{ background: #333; padding:20px; color:#FFF; }
+  #dialogbox > div > #dialogboxfoot{ background: #666; padding:10px; text-align:right; }
+  .animate-left{
+    position:relative;
+    animation-name:animateleft;
+    animation-duration: 5s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: infinite;
+    
+  }
+  @keyframes animateleft{
+    from {left: -1324px;}
+    to {left:0px;}
+   
+  }
+  @media screen and (max-width: 769px) {
+       #wysiwyg_cp{
+          padding:8px;
+          max-width:100%;
+          }
+          #richTextField{
+              width:100%;  
+          }   
+  }
+     
+@media (min-width: 1024px){
+.lg\:flex-row {
+    flex-direction: row;
+}
+}
 @media (max-width: 768px) {
-  .overlay h3 {
+  .navbar-collapse{
+    display:none;
+  }
+    .navbar-toggler{
+      display:block;
+    }
+    .collapseDev{
+     display:block;
+      min-height: 194px;
+     position:relative;
+     animation:animatetop 0.4s}
+     @keyframes animatetop{
+       from{top:-300px;opacity:0} to{top:0;opacity:1}
+      }
+      .assideAdminPanel {
+        display:none;
+      }
+  .sidebarView{
+    display:block !important;
+    min-height: 517px;
+  }
+  .overlay h2 {
     left: 1%;
   }
   .overlay .separate {
@@ -264,7 +510,7 @@ textarea{
     margin: 10px auto;
   }
   .overlayContact {
-    height: 225vh;
+    height: 300vh;
   }
   .containerMessage {
     margin: 5px auto;
@@ -284,6 +530,21 @@ textarea{
   }*/
   .mainSection {
     padding:0;
+  }
+  #Activitestitle
+  {
+    margin:15px auto !important;
+
+  }
+  #Actualitestitle{
+    margin:15px auto !important;
+
+  }
+  .input-group-text {
+    font-size: 13px;
+  }
+  .input-group>.form-control{
+    width:100%;
   }
 }
 @media (min-width: 768px) {

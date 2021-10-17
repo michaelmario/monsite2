@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Site Adminitration</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body  onLoad="iFrameOn()">
+        <div id="dialogoverlay"></div>
+        <div id="dialogbox">
+          <div>
+            <div id="dialogboxhead"></div>
+            <div id="dialogboxbody"></div>
+            <div id="dialogboxfoot"></div>
+          </div>
+        </div>
+        <div class="container-fluid topheader">
+            <header class="bg-nav">
+                <div class="flex justify-between">
+                    <div class="p-1 mx-3 inline-flex">
+                        <div class="navbar_brand">
+                            <img src="img/logoresize.png" alt="logoHeader">
+                        </div>
+                        <i class="fa fa-bars p-3 text-white" onclick="sidebarToggle()"></i>
+                    </div>
+                    <div class="p-1 flex flex-row">                       
+                        <a href="https://github.com/michaelmario" class="text-white p-2 mr-2 no-underline hidden md:block lg:block">Github</a>
+                            <img  class="inline-block imgcircle" type="button" data-toggle="modal" data-target="#exampleModalCenter" src="./images/mario.jpg" alt="">
+                        <a href="#" onclick="profileToggle()" class="text-white p-2 no-underline d-none d-sm-block">Mario Achille</a>
+                     
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="container-fluid">             
+             <div class="row">
+                <div class="col-md-2 col-sm-12">  
+                  <aside  class="assideAdminPanel">
+                <ul class="list-reset ">
+                    <li class="w-full h-full py-3 px-2 border-b ">
+                        <a href="#" class="btn font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline" id="dashboard">
+                            <i class="fa fa-tachometer float-left mx-2 text-white text-2xl" aria-hidden="true"></i>
+                            </i>
+                            Dashboard
+                            <span><i class="fa fa-angle-right float-right mx-3 text-white text-2xl"></i></span>
+                        </a>
+                    </li>
+                    <li class="w-full h-full py-3 px-2 border-b">
+                        <a href="#" class="btn font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline" id="activites">
+                            <i class="fa fa-wpforms float-left mx-2 text-white text-2xl"></i>
+                            Activités
+                            <span><i class="fa fa-angle-right float-right mx-3 text-white text-2xl"></i></span>
+                        </a>
+                    </li>
+                    <li class="w-full h-full py-3 px-2 border-b ">
+                        <a href="#" class="btn font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline" id="actualites">
+                           <i class="fa fa-newspaper-o float-left mx-2 text-white text-2xl" aria-hidden="true"></i>
+                            Actualités
+                            <span><i class="fa fa-angle-right float-right mx-3 text-white text-2xl"></i></span>
+                        </a>
+                    </li>
+                    <li class="w-full h-full py-3 px-2 border-b ">
+                        <a href="#" class="btn font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline" id="table">
+                            <i class="fa fa-table float-left mx-2 text-white text-2xl"></i>
+                            Tables
+                            <span><i class="fa fa-angle-right float-right mx-3 text-white text-2xl"></i></span>
+                        </a>
+                    </li>
+                    <li class="w-full h-full py-3 px-2 border-b">
+                        <a href="#" class="btn font-sans" id="component">
+                           <i class="fa fa-folder float-left  text-white text-2xl" aria-hidden="true"></i>
+                           Components
+                            <span><i class="fa fa-angle-right float-right mx-1 text-white text-2xl"></i></span>
+                        </a>
+                    </li>
+                    <li class="w-full h-full py-3 px-2 border-b border-300-border">
+                        <a href="#" class="btn font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                            <i class="fas fa-square-full float-left mx-2 text-white text-2xl"></i>
+                            Modals
+                            <span><i class="fa fa-angle-right float-right mx-3 text-white text-2xl"></i></span>
+                        </a>
+                    </li>
+                   
+                </ul>
+                  </aside>
+              </div>
+            <div class="col-md-10">
+             <main class="bg-white-300 flex-1 p-3 overflow-hidden">
+                 <section id="firstSection">
+                 <div class="flex flex-col">
+                <div class="flex flex-1 flex-col md:flex-row lg:flex-row justify-content">
+                    <div class="shadow-lg bg-danger border-l-8 hover:bg-red-vibrant-dark border-red-vibrant-dark mb-2 p-5 md:w-1/4 mx-2">
+                        <div class="p-1 flex flex-col">
+                            <div class="no-underline text-white text-2xl">
+                              <p id="activitesInfo"></p>
+                            </div>
+                            <p class="no-underline text-white text-lg">
+                                Activités 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="shadow bg-info border-l-8 hover:bg-info-dark border-info-dark mb-2 p-5 md:w-1/4 mx-2">
+                        <div class="p-1 flex flex-col">
+                            <div class="no-underline text-white text-2xl">
+                                <p id="actualitesInfo"></p>
+                            </div>
+                            <p  class="no-underline text-white text-lg">
+                                Actualités
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="shadow bg-warning border-l-8 hover:bg-warning-dark border-warning-dark mb-2 p-5 md:w-1/4 mx-2">
+                        <div class="p-1 flex flex-col">
+                            <p  class="no-underline text-white text-2xl" id="pageVisites">
+                               
+                            <p>
+                            <p  class="no-underline text-white text-lg">
+                               Page Visités  
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="shadow bg-success border-l-8 hover:bg-success-dark border-success-dark mb-2 p-5 md:w-1/4 mx-2">
+                        <div class="p-1 flex flex-col">
+                            <a href="#" class="no-underline text-white text-2xl">
+                                500
+                            </a>
+                            <a href="#" class="no-underline text-white text-lg">
+                                Total Products
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="sectionActivites" class="sectionActivites">
+                <div class="row">
+                    <div class="col-md-12 sm-12">
+                        <h1 class="mt-3">Activités</h1>
+                <form action="" name="myform" id="Activitesmyform" method="post" class="mt-5">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Écrivez le titre, s'il vous plaît</span>
+                        </div>
+                        <input type="text" class="form-control" id="Activitestitle" aria-label="" required>
+                        <div class="input-group-append">
+                          <span class="input-group-text">Écrivez dans la zone de texte pour l'article:</span>
+                        </div>
+                      </div>
+                      <div class="mt-3">
+                        <input type="date" id="date" name="postId" class="date" required>
+                        </div>                
+                   
+                  <div id="UploadImageActivites">
+                  <label>Télécharger une image</label>
+                  <input type="file" accept="image/*" id="ActivitesImage_input">        
+                  </div>       
+                 <br>
+                <div id="wysiwyg_cp">
+                  <button type="button"  class="btn btn-dark" onClick="iBold()"><i class="fas fa-bold"></i> </button> 
+                  <button type="button" class="btn btn-dark" onClick="iUnderline()"><i class="fas fa-underline"></i></button>
+                  <button type="button" class="btn btn-dark" onClick="iItalic()" value="I"><i class="fas fa-italic"></i></button>
+                  <button type="button" class="btn btn-dark" onClick="iFontSize()" value="Text Size"><i class="fas fa-text-size"></i></button>
+                  <button type="button" class="btn btn-dark" onClick="iForeColor()" value="Text Color"><span class="fas">Text Color</span></button>
+                  <button type="button" class="btn btn-dark" onClick="iHorizontalRule()" value="HR"><i class="fas fa-ruler-horizontal"></i></button>
+                  <button type="button" class="btn btn-dark" onClick="iUnorderedList()" value="UL"><span class="fas">UL</span></button>
+                  <button type="button" class="btn btn-dark" onClick="iOrderedList()" value="OL"><span class="fas">OL</span></button>
+                  <button type="button" class="btn btn-dark" onClick="iLink()" value="Link"><i class="fas fa-link"></i></button>
+                  <button type="button" class="btn btn-dark" onClick="iUnLink()" value="UnLink"><i class="fas fa-unlink"></i></button>
+                  <button type="button" class="btn btn-dark" onClick="activitesImage()" value="Image"><i class="fas fa-images"></i></button>
+                </div>
+                <!-- Hide(but keep)your normal textarea and place in the iFrame replacement for it -->
+                <textarea style="display:none;"  id="ActivitesmyTextArea" cols="100" rows="14" ></textarea>
+                <div class="card">
+                <iframe name="ActivitesrichTextField" id="ActivitesrichTextField"></iframe>
+              </div>
+                <!-- End replacing your normal textarea -->
+                <div class="card" id="outputActivites"></div>
+                <br /><br />
+                <div class="row">
+                <div class="col-md-6">
+                <button name="myBtn" type="button" class="btn btn-dark" value="Submit Data" id="ActivitesSubmitData">Envoyer</button>
+                </div>
+                <div class="col-md-6">
+                <button title="Refresh" class="btn btn-dark" onclick="window.location.reload()">
+                    <i class="fa fa-refresh w3-spin"></i>
+                </button>
+                </div>
+                
+                </form>
+                </div>
+                <div class="col-md-12 sm-12">
+                  <div class="output" id="activitesOutput">
+                    <button onclick="Prompt.render('Type some text:','changeText')">Change Text</button>
+<button onclick="Prompt.render('Type a color name:','doStuff')">Do stuff</button>
+<button onclick="Alert.render('Hello World')">Alert</button>
+                  </div>
+                </div>
+                </div>  
+            </section>
+            <section id="sectionActualites">                
+                <div class="row">
+                    <div class="col-md-12 sm-12">
+                        <h1 class="mt-3">Actualités</h1>
+                      <form action="" name="myform" id="Actualitesmyform" method="post" class="mt-5">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Écrivez le titre, s'il vous plaît</span>
+                        </div>
+                        <input type="text" class="form-control" id="Actualitestitle" aria-label="">
+                        <div class="input-group-append">
+                          <span class="input-group-text">Écrivez dans la zone de texte pour l'article:</span>
+                        </div>
+                      </div>                
+                   
+                  <div id="UploadImageActualites">
+                  <label>Télécharger une image</label>
+                  <input type="file" accept="image/*" id="actualitesImage_input">        
+                  </div> 
+                  <div class="mt-3">
+                    <input type="date" id="ActualitesDate" name="postId" class="date" required>
+                    </div>        
+                 <br>
+                <div id="wysiwyg">
+                  <button type="button"  class="btn btn-dark" onClick="iBold()"><i class="fas fa-bold"></i> </button> 
+                  <button type="button" class="btn btn-dark" onClick="iUnderline()"><i class="fas fa-underline"></i></button>
+                  <button type="button" class="btn btn-dark" onClick="iItalic()" value="I"><i class="fas fa-italic"></i></button>
+                  <button type="button" class="btn btn-dark" onClick="iFontSize()" value="Text Size"><i class="fas fa-text-size"></i></button>
+                  <button type="button" class="btn btn-dark" onClick="iForeColor()" value="Text Color"><span class="fas">Text Color</span></button>
+                  <button type="button" class="btn btn-dark" onClick="iHorizontalRule()" value="HR"><i class="fas fa-ruler-horizontal"></i></button>
+                  <button type="button" class="btn btn-dark" onClick="iUnorderedList()" value="UL"><span class="fas">UL</span></button>
+                  <button type="button" class="btn btn-dark" onClick="iOrderedList()" value="OL"><span class="fas">OL</span></button>
+                  <button type="button" class="btn btn-dark" onClick="iLink()" value="Link"><i class="fas fa-link"></i></button>
+                  <button type="button" class="btn btn-dark" onClick="iUnLink()" value="UnLink"><i class="fas fa-unlink"></i></button>
+                  <button type="button" class="btn btn-dark" onClick="actualitesImage()" value="Image"><i class="fas fa-images"></i></button>
+                </div>
+                <!-- Hide(but keep)your normal textarea and place in the iFrame replacement for it -->
+                <textarea style="display:none;"  id="ActualitesmyTextArea" cols="100" rows="14" ></textarea>
+               <div class="card">
+                <iframe name="ActualitesrichTextField" id="ActualitesrichTextField"></iframe>
+              </div>
+                <!-- End replacing your normal textarea -->
+                <div class="card" id="outputActualites"></div>
+                <br /><br />
+                <div class="row">
+                <div class="col-md-6">
+                <button name="myBtn" type="button" class="btn btn-dark" value="Submit Data" id="ActualitesSubmitData">Envoyer</button>
+                </div>
+                <div class="col-md-6">
+                <button title="Refresh" class="btn btn-dark" onclick="window.location.reload()">
+                    <i class="fa fa-refresh w3-spin"></i>
+                </button>
+                </div>
+            </div>
+            </form>
+                </div>
+                <div class="col-md-12 sm-12">
+                  <div class="output" id="actualitesoutput">
+                  </div>
+                </div>
+                </div>  
+            </section>
+            <section id="sectiontable">table</section>
+            <section id="sectioncomponent">component</section>
+            <section id="sectionmodal">Activites</section>
+                 </div>
+             </main>
+            </div>
+            </div>
+            <div class="container-fluid topheader">
+                <footer class="containe">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="text-center">© 2021 Mauricode Academy 2021,
+                                Inc. All rights
+                                reserved.</p>
+                                <a href="/index.html">Accueil<i class="fa fa-angle-right float-right mx-3 text-white text-2xl"></i></a>
+                            <div class="text-center">Icônes conçues par <a
+                                    href="https://www.flaticon.com/fr/auteurs/flat-icons"
+                                    title="Flat Icons">Flat Icons</a> from <a
+                                    href="https://www.flaticon.com/fr/"
+                                    title="Flaticon">www.flaticon.com</a></div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <script src="./js/newapp.js" async defer></script>
+            <script src="./js/dialog.js" async defer></script> 
+    </body>
+    </html>
